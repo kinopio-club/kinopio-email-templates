@@ -26,14 +26,14 @@
           </span>
           <!-- space -->
           {{#space}}
-            <span class="badge secondary button-badge space-badge" data-id="space">
+            <a class="badge secondary button-badge space-badge" href="{{../spaceUrl}}" data-id="space">
               {{ name }}
-            </span>
+            </a>
           {{/space}}
         </div>
         <!-- details -->
         {{#isDetails}}
-          <div class="card-badge button-badge" data-id="details">
+          <a class="card-badge button-badge" href="{{../url}}" data-id="details">
             {{#../details}}
               {{.}}
             {{/../details}}
@@ -42,7 +42,7 @@
                 <img class="notification-image" src="{{.}}">
               </div>
             {{/../detailsImage}}
-          </div>
+          </a>
         {{/isDetails}}
         <!-- button -->
         {{#buttonMessage}}
