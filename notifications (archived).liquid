@@ -1,0 +1,76 @@
+<header>
+  <a href="https://kinopio.club">
+    <img src="https://kinopio-email.us-east-1.linodeobjects.com/logo-base.png" width="50"/>
+  </a>
+  <p>
+    <div class="badge info">New Notifications</div>
+  </p>
+</header>
+
+<main>
+  <hr/>
+  {{#notifications}}
+    {{#each .}}
+      <div class="notification">
+        <div class="row">
+          <!-- user -->
+          <a class="badge-url" href="{{url}}">
+            <span class="user badge button-badge" style="background:{{user.color}}">
+              <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+              {{ user.name }}
+            </span>
+          </a>
+          <!-- space -->
+          <a href="{{url}}">
+            {{ space.name }}
+          </a>
+
+        </div>
+
+        <!-- details -->
+        {{#details}}
+          <div class="row">
+            <a class="details-url" href="{{.}}">
+              <span class="badge secondary">
+                {{#../icon}}
+                  <img class="icon inline-icon {{../iconClass}}" src="{{.}}">
+                {{/../icon}}
+                {{../message}}
+              </span>
+              <span>
+                {{../details}}
+              </span>
+            </a>
+          </div>
+        {{/details}}          
+
+        <!-- button -->
+        {{#buttonUrl}}
+          <div class="row">
+            <a class="badge-url" href="{{.}}">
+              <div class="button">
+                {{#../icon}}
+                  <img class="icon {{../iconClass}}" src="{{.}}">
+                {{/../icon}}
+                <span>
+                  {{../buttonMessage}}
+                </span>
+              </div>
+            </a>
+          </div>
+        {{/buttonUrl}}
+
+      </div>
+    {{/each}}
+  {{/notifications}}
+  <hr/>
+</main>
+
+<footer>
+  <p>You've received this email because of activity on you, or your spaces. You must be quite cool.</p>
+  <p>Questions? Just reply to this email :)</p>
+  {{#each unsubscribeSpaces}}
+    <p><a href="{{spaceUnsubscribeUrl}}">Unsubscribe from {{spaceName}}</a></p>
+  {{/each}}
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe from All Notifications</a></p>
+</footer>

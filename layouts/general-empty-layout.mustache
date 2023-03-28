@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title></title>
+  <!--
+    Postmark automatically inlines all CSS properties for maximum email client
+    compatibility. You can just update styles here, and Postmark does the rest.
+    -->
+  <style type="text/css">
+
+    body {
+      font-family: helvetica, arial, sans-serif;
+      background-color: white;
+    }
+
+/*    @font-face {
+      font-family: "Recoleta";
+      src: url("https://kinopio-email.us-east-1.linodeobjects.com/Recoleta-Regular.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Recoleta";
+      src: url("https://kinopio-email.us-east-1.linodeobjects.com/Recoleta-Bold.woff2") format("woff2");
+      font-weight: bold;
+      font-style: normal;
+    }
+    h2 {
+      font-family: Recoleta, georgia, serif;
+      font-weight: bold;
+      font-size: 20px;
+    }
+*/
+    section {
+      margin-top: 1em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #cdcdcd;
+      /*margin-bottom: 1em;*/
+      display: block;
+      max-width: 500px;
+    }
+    section:last-child {
+      margin-bottom: 1em;
+    }
+
+    button,
+    .button {
+      display: inline-block;
+      text-align: left;
+      padding: 7px;
+      padding-top: 4px;
+      padding-bottom: 3px;
+      margin: 0;
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 100%;
+      font-family: helvetica, arial, sans-serif;
+      vertical-align: middle;
+      text-decoration: none !important;
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+      color: black;
+    }
+    button:hover,
+    .button:hover,
+    button.hover,
+    button:focus {
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+      background: #d8d8d8;
+    }
+    button:active,
+    .button:active
+    button.active {
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+      color: black;
+      background: #cdcdcd;
+    }
+    button:focus {
+      outline: none;
+    }
+    .button-wrap + .button-wrap {
+      margin-top: 12px;
+    }
+    p {
+      max-width: 500px
+    }
+    p img {
+      width: 100%;
+      border-radius: 6px;
+      max-width: 500px;
+      display: block;
+      margin-top: 1em;
+    }
+    footer {
+      margin-top: 1em;
+    }
+    .froggo {
+      display: inline-block;
+      margin-right: 3px;
+    }
+    footer p {
+      max-width: 430px;
+    }
+    .badge {
+      border-radius: 6px;
+      padding: 2px 5px;
+      display: inline-block;
+      min-width: 17px;
+      vertical-align: middle;
+    }
+    .info {
+      background-color: #90ffff;
+    }
+    .success {
+      background-color: #98f49f;
+    }
+    .danger {
+      background-color: #ffb8b3;
+    }
+    
+    .product {
+      display: flex;
+      align-items: center;
+    }
+    .product-image {
+      max-width: 100px;
+      margin-right: 12px;
+    }
+    .product-name {
+      margin-bottom:  6px;
+    }
+
+    /* notification emails */
+
+    .notification-wrap {
+      margin-top: 1em;
+    }
+    .notification-wrap a,
+    .inline-badges-wrap a {
+      color: black;
+      text-decoration: none;
+    }
+    .notification-wrap .explore-link {
+      text-decoration: underline;
+    }
+    .button-badge {
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+    .button-badge:hover {
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.25);
+    }
+    .button-badge:active {
+      box-shadow: inset 0 2px 3px rgba(0,0,0,0.20);
+    }
+
+    .badge.secondary {
+      background: #cdcdcd;
+    }
+    .badge.info {
+      background: #90ffff;
+    }
+    .user-avatar {
+      width: 13px;
+      height: 7px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-top: 0;
+    }
+    .notification-wrap .badge {
+      margin-right: 3px;
+    }
+    .inline-badges-wrap .badge {
+      display: inline-block;
+      margin-top: 1em;
+      margin-right: 3px;
+    }
+    .card-wrap {
+      margin-top: 0.5em;
+      max-width: 320px;
+    }
+    .card-wrap:last-child {
+      margin-bottom: 0;
+    }
+    .card-wrap .card-name:hover {
+      text-decoration: underline;
+    }
+    .card-image {
+      max-height: 200px;
+      width: auto;
+      max-width: 95%;
+      display: block;
+      margin-left: 0;
+    }
+
+    /* icons */
+
+    .icon.add {
+      width: 10px;
+      display: inline-block;
+      margin-top: 0;
+    }
+    .icon.heart {
+      width: 14px;
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+    }    
+    .icon.new,
+    .icon.updated {
+      margin: 0;
+      width: 28px;
+      display: inline;
+      vertical-align: -1px;
+    }
+    .icon.updated {
+      width: 44px;
+    }
+    .icon.sunglasses {
+      margin: 0;
+      width: 20px;
+      display: inline;
+    }
+    .icon.updated {
+      margin-top: 2px;
+    }
+    .icon.lock {
+      margin: 0;
+      display: inline;
+      width: 8px;
+      height: 11px;
+      border-radius: 0;
+    }
+
+.space-wrap a {
+  color: black;
+  text-decoration: none;
+}
+
+.space-wrap:hover .space-name {
+  text-decoration: underline;
+}
+.space-wrap:hover .button-badge {
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.25);
+}
+.space-wrap:active .space-name {
+  text-decoration: none;
+}
+.space-wrap:active .button-badge {
+  box-shadow: inset 0 2px 3px rgba(0,0,0,0.20);
+}
+
+.intro-badge {
+  display: block;
+  margin-top: 10px;
+  max-width: 450px;
+}
+
+.new-icon {
+  width: initial;
+  display: inline-block;
+}
+
+main li {
+  max-width: 400px;
+  margin-bottom: 1em;
+}
+
+mail ul {
+  padding-inline-start: 20px;
+}
+
+.bulletin-image {
+  margin-left: 0;
+}
+.small-image {
+  max-width: 300px;
+}
+.tiny-image {
+  max-width: 80px;
+}
+
+    img.wide {
+      max-width: 700px;
+    }
+    img.narrow {
+      width: 250px;
+}
+
+a.text-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+hr {
+  border-top: 1px solid #cdcdcd;
+  border-bottom: none;
+}
+
+/* notifications */
+
+.notifications .icon {
+  vertical-align: 0;
+}
+
+.notifications .badge {
+  vertical-align: middle;
+}
+
+a.card-badge-url {
+  color: black;
+  text-decoration: none;
+}
+
+.notification .row + .row {
+  margin-top: 10px;
+}
+
+.notification {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-badge {
+  padding: 8px;
+  max-width: 320px;
+  display: inline-block;
+  background: #e3e3e3 !important;
+  margin-top: 5px;
+}
+
+.space-badge {
+  display: initial;
+}
+
+.notification-image {
+  border-radius: 6px;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+
+  </style>
+</head>
+<body>
+  {{{ @content }}}
+</body>
+</html>

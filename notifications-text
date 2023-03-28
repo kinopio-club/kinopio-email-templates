@@ -1,0 +1,31 @@
+{{#each notifications}}
+
+  {{ message }}
+  user: {{ user.name }}
+
+  {{#space}}
+    Space: {{ name }}
+  {{/space}}
+
+  {{#details}}
+    {{.}}
+    {{../detailsImage}}
+  {{/details}}
+
+  {{#buttonMessage}}
+    {{.}}
+  {{/buttonMessage}}
+
+  url: {{ url }}
+
+{{/each}}
+
+You've received this email because of activity on your Kinopio spaces. You must be quite cool.
+
+Questions? Just reply to this email :)
+
+{{#each unsubscribeSpaces}}
+  Unsubscribe from {{spaceName}}: {{spaceUnsubscribeUrl}}
+{{/each}}
+
+Unsubscribe: {{unsubscribeUrl}}
