@@ -35,12 +35,12 @@
         {{#isDetails}}
           <a class="card-badge button-badge" href="{{../url}}" data-id="details">
             {{#../details}}
-              {{.}}
+              <p>
+                {{.}}
+              </p>
             {{/../details}}
             {{#../detailsImage}}
-              <div data-id="details-image">
-                <img class="notification-image" src="{{.}}">
-              </div>
+              <img class="notification-image" src="{{.}}" data-id="details-image">
             {{/../detailsImage}}
           </a>
         {{/isDetails}}
