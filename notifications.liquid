@@ -21,7 +21,7 @@
             {{ user.name }}
           </span>
           <!-- message -->
-          <span class="" data-id="message">
+          <span data-id="message">
             {{message}}
           </span>
           <!-- space -->
@@ -33,19 +33,13 @@
         </div>
         <!-- details -->
         {{#isDetails}}
-          <div class="card-badge">
+          <div class="card-badge button-badge" data-id="details">
             {{#../details}}
-              <div class="" data-id="details">
-                <span class="">
-                  {{.}}
-                </span>
-              </div>
+              {{.}}
             {{/../details}}
             {{#../detailsImage}}
-              <div class="" data-id="details-image">
-                <span>
-                  <img class="notification-image" src="{{.}}">
-                </span>
+              <div data-id="details-image">
+                <img class="notification-image" src="{{.}}">
               </div>
             {{/../detailsImage}}
           </div>
