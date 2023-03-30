@@ -33,15 +33,23 @@
         </div>
         <!-- details -->
         {{#isDetails}}
-          <a class="card-badge button-badge" href="{{../url}}" data-id="details">
-            {{#../details}}
-              <p>
-                {{.}}
-              </p>
-            {{/../details}}
-            {{#../detailsImage}}
-              <img class="notification-image" src="{{.}}" data-id="details-image">
-            {{/../detailsImage}}
+          <a href="{{../url}}">
+            <table class="card-badge button-badge" data-id="details">
+              {{#../details}}
+                <tr>
+                  <td>
+                    {{.}}
+                  </td>
+                <tr>
+              {{/../details}}
+              {{#../detailsImage}}
+                <tr>
+                  <td>
+                    <img class="notification-image" src="{{.}}" data-id="details-image">
+                  </td>
+                <tr>
+              {{/../detailsImage}}
+            </table>
           </a>
         {{/isDetails}}
         <!-- button -->
@@ -57,9 +65,9 @@
         {{/buttonMessage}}
 
       </div>
+      <hr/>
     {{/each}}
   {{/notifications}}
-  <hr/>
 </main>
 
 <footer>

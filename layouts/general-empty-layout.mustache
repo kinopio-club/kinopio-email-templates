@@ -10,6 +10,10 @@
     -->
   <style type="text/css">
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: helvetica, arial, sans-serif;
       background-color: white;
@@ -313,7 +317,7 @@ hr {
 
 .notification {
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   max-width: 420px;
 }
 
@@ -325,17 +329,18 @@ hr {
 .card-badge {
   border-radius: 6px;
   padding: 8px;
-  max-width: 320px;
-  display: inline-block;
+  width: fit-content;
+  max-width: 260px;
+  display: block;
   background: #e3e3e3 !important;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .card-badge p {
   margin: 0;
 }
 .card-badge p + img {
- margin-top: 5px;
+ margin-top: 10px;
 }
 
 .space-badge {
