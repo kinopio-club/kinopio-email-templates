@@ -17,8 +17,18 @@
           <img class="icon {{iconClass}}" src="{{icon}}" data-id="icon">
           <!-- user -->
           <span class="badge" style="background:{{user.color}}" data-id="user">
-            <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
-            {{ user.name }}
+            {{#userColorIsLight}}
+              <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+              <span>
+                {{ ../user.name }}
+              </span>
+            {{/userColorIsLight}}
+            {{#userColorIsDark}}
+              <img class="user-avatar invert" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+              <span class="invert">
+                {{ ../user.name }}
+              </span>
+            {{/userColorIsDark}}
           </span>
           <!-- message -->
           <span data-id="message">
@@ -71,7 +81,7 @@
 </main>
 
 <footer>
-  <p>You've received this email because of activity on your Kinopio spaces. You must be quite cool.</p>
+  <p>You've received this email because of activity on your Kinopio spaces, and on spaces you ♥. You must be quite cool.</p>
   <p>Questions? Just reply to this email :)</p>
   {{#each unsubscribeSpaces}}
     <p><a href="{{spaceUnsubscribeUrl}}">Unsubscribe from {{spaceName}}</a></p>
