@@ -1,0 +1,93 @@
+<header>
+<img src="https://kinopio-email.s3.us-east-1.amazonaws.com/logo-base.png" width="50"/>
+<p>
+  <div class="badge info">{{subject}}</div>
+  <p>
+    <span class="badge secondary">
+      This bulletin is a biweekly correspondence from the
+      creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking
+      tool for new ideas and hard problems
+    </span>
+  </p>
+</p>
+</header>
+
+<main>
+
+    <!-- 🛶 intro personal message: song listening to, movies, weather, view from my window, animal sightings -->
+
+    <p>
+      <span class="badge info">What's New</span>
+    </p>
+
+    <!-- 🛶 -->
+
+    <p>Continuing from the last bulletin, I spent the last couple weeks working on making every interaction, like loading spaces, scrolling, painting, dragging and editing cards 2-5x faster and more responsive. </p>
+
+    <p>
+    <img src="https://us-east-1.linodeobjects.com/kinopio-uploads/Xae35h-2o7QXE0dEYRWvl/perf-up-space.png" alt="" />
+    </p>
+
+    <p>I also wanted to ship something fun this week, so I reached out to <a href="https://www.joifulton.com">Joi Fulton</a> about licensing some of her work for a new frame,</p>
+
+    <p>
+    <img src="https://kinopio-updates.us-east-1.linodeobjects.com/dead-to-me-frame-small.png" alt="" />
+    </p>
+
+    <p>I think it turned out really well. It’s got spooky seasonal vibes but I hope you can use it year round too.</p>
+
+    <p>
+      <span class="badge info">Upcoming</span>
+    </p>
+    <!-- 🛶 -->
+
+    <p>My original plan was to email bulletins like this every two weeks – a nice regular update on Kinopio and the community. But the reality has been that these emails go out whenever the stars align. </p>
+
+    <p>
+    <img src="https://us-east-1.linodeobjects.com/kinopio-uploads/9IbHzkpfi1ECLEJLtCTxK/original-cd8095c5e622a7f0edfbee121525f14b.gif" alt=""  />
+    </p>
+
+    <p>It gets a little stressful when it’s been a while tbh.</p>
+
+    <p>So I want to address this by creating a new weekly email that lists new Explore spaces, info related to your ♥s, and whatever else I come up with. </p>
+
+    <p>I haven’t designed it yet so if you’ve got any thoughts, ideas, or if you know any really great emails I should look at, please let me know.</p>
+
+    <span class="badge info">New Explore Spaces</span>
+  </p>
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <!-- TODO show updated favorite spaces, limit 20 -->
+
+  <p>
+    <!-- Okay that's enough of that, -->
+    (*・_・)ノ⌒*
+  </p>
+
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="https://github.com/kinopio-club/kinopio-meta/tree/master/bulletins">Archives</a></p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>

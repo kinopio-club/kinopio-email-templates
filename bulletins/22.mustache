@@ -1,0 +1,100 @@
+<header>
+<img src="https://kinopio-email.s3.us-east-1.amazonaws.com/logo-base.png" width="50"/>
+<p>
+  <div class="badge info">{{subject}}</div>
+  <p>
+    <span class="badge secondary">
+      This bulletin is a monthly~ correspondence from the
+      creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking
+      tool for new ideas and hard problems
+    </span>
+  </p>
+</p>
+</header>
+
+<main>
+
+  <!-- 🛶 intro personal message: song listening to, movies, weather, view from my window, animal sightings -->
+
+  <p>Hi Friends,</p>
+
+  <p>We're coming up on the Kinopio's third birthday, here's to another year of creative spatial thinking and new connections.</p>
+
+  <p>
+  <img class="bulletin-image" src="https://d2w9rnfcy7mm78.cloudfront.net/11273747/original_0ee24c4ce25cf520a1c6b3120906891c.jpg?1616421804?bc=0" alt="" />
+  </p>
+
+  <p>To help grow Kinopio into a sustainable business (i.e. it can at least pay my rent), I'll be raising the price for new users from $5/mo to $8/mo in about two weeks. Now's a good time to upgrade if you want to be grandfathered into the current price.</p>
+
+  <p>I'm always nervous about pricing changes but surprisingly (or maybe unsurprisingly) everyone seemed supportive of the move on <a href="https://twitter.com/KinopioClub/status/1516082269835907085">twitter</a> and <a href="https://discord.com/channels/857305113936134204/857724442797146173/965642296202756176">discord</a>. </p>
+
+  <p>
+    <span class="badge info">What's New</span>
+  </p>
+
+  <!-- 🛶 -->
+  <!-- <p>Some highlights~</p> -->
+
+  <ul>
+    <li><a href="https://twitter.com/KinopioClub/status/1505311029861011461">Browser Extensions</a> for quickly recording thoughts, inspirations, and urls. <a href="https://help.kinopio.club/posts/extensions/">Download for Firefox, Chrome, and Safari</a></li>
+    <li><a href="https://twitter.com/KinopioClub/status/1514271317465440258">Save Space PDF</a> Save your entire space as a PDF which you can send to your friends, or just keep for yourself</li>
+
+    <li><a href="https://twitter.com/KinopioClub/status/1514610067215052801">Personal Templates</a> Turn your own spaces into easy to duplicate templates</li>
+    <li><a href="https://twitter.com/KinopioClub/status/1516410912126685195">Drag Connector to Add New Card</a> Dragging and releasing a connection on empty space now creates a new blank card</li>
+
+    <p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/16118184/original_b073072bc337a1f39a6e3a01697c38c8.gif?1650375563?bc=0" alt="" />
+    </p>
+
+
+    <li><a href="https://twitter.com/KinopioClub/status/1516780992257826818">Select Cards by Tag</a> Click a card tag to select all other cards with that tag</li>
+    <li><a href="https://twitter.com/KinopioClub/status/1517186674828226560">Improved Multi-Card Styles</a> options now open inline and stay open until you close them</li>
+    <li><a href="https://twitter.com/KinopioClub/status/1517594330877284355">Select All Below</a> Make room in tight and busy spaces by hovering near the left edge and dragging to select all cards and connections below you</li>
+
+    <p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/16182209/original_583fda1a59f1f3633f0da3f0bc76c99b.gif?1650736807?bc=0" alt="" />
+    </p>
+
+  </ul>
+
+  <p>
+    <span class="badge info">New Explore Spaces</span>
+  </p>
+
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <p>
+    <!-- Okay that's enough of that, -->
+    (*・_・)ノ⌒*
+  </p>
+
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+  <p>
+    <img class="tiny-image" src="https://help.kinopio.club/assets/about/signature.png">
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="https://github.com/kinopio-club/kinopio-meta/tree/master/bulletins">Archives</a></p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>
