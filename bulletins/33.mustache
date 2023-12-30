@@ -1,0 +1,127 @@
+<header>
+<img src="https://kinopio-email.us-east-1.linodeobjects.com/logo-base.png" width="50"/>
+<p>
+  <div class="badge info">{{subject}}</div>
+  <p>
+    <span class="badge secondary">
+      This bulletin is a monthly~ correspondence from the
+      creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking
+      tool for new ideas and hard problems
+    </span>
+    <!-- span class="badge secondary">
+      This bulletin is a monthly~ correspondence from the
+      creator of <a href="https://kinopio.club">Kinopio</a>, helping you
+      express yourself and turn ideas into understanding
+    </span>
+    -->
+  </p>
+</p>
+</header>
+
+<main>
+
+<p>Hi friends,</p>
+
+<p>So for the last couple months I've been experimenting with cross-posting all my social media posts to see what kind of energy I'd get back on each site. I figured I had nothing to lose. (Except my time, and sanity).</p>
+
+<p><img src="https://updates.kinopio.club/wizard-walk.jpeg" class="wide"></p>
+
+<p>I occasionally got good feedback and discussions on 𝕏 (general audiences), Mastodon (technical), and on <a class="autolink" href="https://Posts.cv">Posts.cv</a> (designers). But I only ever got crickets on Bluesky, Instagram, Threads, and LinkedIn, so I probably won't use those <a href="https://kinopio.club/social-media-plezJhK98WCzh52YOYSLR">anymore</a>.</p>
+
+<p>Thankfully, besides word-of-mouth, what seems to work best is old-fashioned blogging and email newsletters (like this one). Every time I blog on my <a href="https://pketh.org">personal site</a>, 200~ new people decide to subscribe to new posts by email, which is really cool. As you might imagine, a blog post takes a lot more time/effort to write than a Tweet ('𝕏cretion'?), but it also feels more <em>real</em> somehow.</p>
+
+<p><img src="https://updates.kinopio.club/spec-blog-comments.jpeg" class=''></p>
+
+<p>To spend even more time in blog-world, I'm thinking of adding a simple comments system. I've roughly <a href="https://kinopio.club/-spec-adding-comments-to-my-static-blog-jekyll--uaNk92XDHebjn_336IL-8">planned it out</a>, let me know what you think.</p>
+
+<p>And as always, thanks for reading ☻</p>
+
+<h2>what's new</h2>
+
+<ul>
+<li><a href="https://blog.kinopio.club/posts/generated-backgrounds">Generated Backgrounds and Translucent Buttons</a> make finding the right vibe that much easier.</li>
+</ul>
+<p><img src="https://kinopio-blog.us-east-1.linodeobjects.com/translucent-ui-buttons.gif"></p>
+
+<ul>
+<li><p>If you don't like subscriptions, you can now purchase a <a href="https://blog.kinopio.club/posts/lifetime-plan">Lifetime Plan</a> for $200 instead.</p></li>
+<li><p><a href="https://blog.kinopio.club/posts/bigger-better-code-blocks">Bigger, Better Code Blocks</a> with syntax highlighting and a higher character limit when you paste code into cards between <code>triple backticks</code> ```.</p></li>
+</ul>
+<p><img src="https://kinopio-blog.us-east-1.linodeobjects.com/better-code-blocks.gif"></p>
+
+<ul>
+<li><a href="https://blog.kinopio.club/posts/read-only-invite">Read-Only Invites</a> let someone else view a private space – but not edit it.</li>
+</ul>
+<p><img src="https://kinopio-blog.us-east-1.linodeobjects.com/read-only-invite-2.gif"></p>
+
+<ul>
+<li><p>[New Blog Post] <a href="https://pketh.org/kinopio-qa.html">Productivity vs Insight, Tools for Reflection, and Other Questions Answered</a></p></li>
+<li><p>[New Blog Post] <a href="https://pketh.org/design-principles.html">Kinopio's Design Principles</a></p></li>
+</ul>
+
+<h2>Works in Progress</h2>
+
+<ul>
+<li>Still working on <em>Lines</em>: A totally new tool for organizing your spaces</li>
+</ul>
+
+<p><img src="https://kinopio-blog.us-east-1.linodeobjects.com/lines.gif"></p>
+
+<ul>
+<li>Improved unfurls/link previews when sharing public space URLs in Slack, X, Discord, etc.</li>
+<li>An iOS 17 widget display fix</li>
+<li>Help Site 2.0 (I've been <a href="https://kinopio.club/help-site-2-0-7aRBlum3fki4GAapCclrO">collecting ideas</a> to redesign it for the last month of so)</li>
+</ul>
+
+<h2>A Call for Friends of Kinopio</h2>
+
+<p>If you've read it this far then you must be quite special.</p>
+
+<p>If you're interested in building an audience by blogging, video-ing, or podcast-ing about Kinopio – and getting an exclusive user badge and cool stickers – then maybe the <em>Friends-of-Kinopio</em> Ambassador program is for you.</p>
+
+<p><img src="https://updates.kinopio.club/ambassador-space-cropped.png" class=""></p>
+
+<p><a href="https://kinopio.club/friends-of-kinopio-ambassadors-YNmS6C3fofN3R9mYgO1Bu">Check out this space</a> to learn more and join the club.</p>
+
+</body>
+
+
+<h2>New Explore Spaces</h2>
+
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <p>
+    <!-- Okay that's enough of that, -->
+    (*・_・)ノ⌒*
+  </p>
+
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+  <p>
+    <img class="tiny-image" src="https://help.kinopio.club/assets/about/signature.png">
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="https://github.com/kinopio-club/kinopio-meta/tree/master/bulletins">Archives</a></p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>
