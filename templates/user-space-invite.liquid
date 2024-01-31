@@ -1,0 +1,54 @@
+<header>
+  <a href="https://kinopio.club">
+    <img class="kinopio-logo" src="https://kinopio-email.us-east-1.linodeobjects.com/logo-base.png"/>
+  </a>
+  <p>
+    <div class="badge info">Space Invite</div>&nbsp;
+  </p>
+</header>
+
+<main>
+  <div class="notification-wrap">
+    <!-- info -->
+    <p>
+      <span class="user badge badge-no-margin" style="background:{{user.color}}">
+        <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+        {{ user.name }}</span>
+        <span>invited you to join </span>
+      <a href="{{ spaceInviteUrl }}">
+        <span class="badge secondary button-badge">
+          {{ space.name }}
+        </span>
+      </a>
+      <span> on Kinopio</span>
+    </p>
+    <!-- custopm message -->
+    <!--
+    <p>
+      <span class="badge" style="background:{{user.color}}">
+        <span>{{ message }}</span>
+      </span>
+    </p>
+     -->
+    <!-- CTA button -->
+    <p>
+      <a class="text-link" href="{{ spaceInviteUrl }}">
+        <button class="cta success">
+          <span>Join Space</span>
+        </button>
+      </a>
+    </p>
+    <!-- preview img -->
+    <p>
+      <a href="{{ spaceInviteUrl }}">
+        <img class="space-preview-image" src="{{ space.previewImage }}">
+      </a>
+    </p>
+  </div>
+</main>
+
+<footer>
+  <hr/>
+  <p>Kinopio is the visual thinking tool for new ideas and hard problems. Use it to brainstorm, research, plan and take notes.</p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe from Notifications</a></p>
+</footer>
