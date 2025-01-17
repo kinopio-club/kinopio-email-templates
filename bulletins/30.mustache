@@ -1,0 +1,128 @@
+<header>
+<img src="https://kinopio-email.us-east-1.linodeobjects.com/logo-base.png" width="50"/>
+<p>
+  <div class="badge info">{{subject}}</div>
+  <p>
+    <span class="badge secondary">
+      This bulletin is a monthly~ correspondence from the
+      creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking
+      tool for new ideas and hard problems
+    </span>
+    <!-- span class="badge secondary">
+      This bulletin is a monthly~ correspondence from the
+      creator of <a href="https://kinopio.club">Kinopio</a>, helping you
+      express yourself and turn ideas into understanding
+    </span>
+    -->
+  </p>
+</p>
+</header>
+
+<main>
+
+<p>Hi friends,</p>
+
+<p>This month I spent time in the Philippines, Indonesia, and Detroit. Would it surprise you to hear that Detroit <em>might</em> be my favorite of the three? Maybe once I'm here for a little longer I'll write a review of the city.</p>
+
+<p><img src="https://kinopio-blog.us-east-1.linodeobjects.com/birds-eye-street.png" class="wide"></p>
+
+<h2>What's New</h2>
+
+<p>The big new release is <a href="https://blog.kinopio.club/posts/card-links">Card Links</a>: Every card now has it's own URL you can share anywhere,</p>
+
+<p><img src="https://kinopio-updates.us-east-1.linodeobjects.com/card-link.png"></p>
+
+<p>So what happens if you paste a card link into another card? You'll get a live preview of the card – which you can even edit right there</p>
+
+<ul>
+<li>Add your best ideas from meeting spaces to project spaces</li>
+<li>Track tasks across spaces in a single place</li>
+<li>Weave your own personal wiki</li>
+</ul>
+
+<p><img src="https://kinopio-blog.us-east-1.linodeobjects.com/preview-and-edit-linked-cards.gif" class="wide"></p>
+
+<p>I noticed that people often paste invite URLs into cards to invite collaborators to join their other private spaces.</p>
+
+<p>To make inviting easier, invites in cards now display information about the space so you be more confident about jumping in</p>
+
+<p><img src="https://kinopio-updates.us-east-1.linodeobjects.com/pretty-invites.png" class="small-image"/></p>
+
+<p><a href="https://blog.kinopio.club/posts/community-backgrounds/">New Community Backgrounds</a> One of the first things people do when creating a new space is choosing a background for it. The right image sets the tone for what follows.</p>
+
+<p><img src='https://kinopio-updates.us-east-1.linodeobjects.com/community-backgrounds-thumb.png' class=""></p>
+
+<h2>Also,</h2>
+
+<ul>
+<li>receive notifications when people ♥ you and your spaces</li>
+<li>To share a space with the UI hidden use <code>Share → Enable the presentation mode button → Copy URL</code></li>
+</ul>
+
+<h2>Improvements</h2>
+
+<p><img src="https://kinopio-blog.us-east-1.linodeobjects.com/magic-paint-select.gif"></p>
+
+<ul>
+<li><a href="https://blog.kinopio.club/posts/magic-paint-select/">Faster and smoother paint selection</a></li>
+<li><a href="https://blog.kinopio.club/posts/updated-hello-space/">Updated hello space</a> for new users</li>
+<li>Redesigned youtube embeds, and added support for Youtube playlist URLs</li>
+<li>Simplified the UI for adding tint colors to your backgrounds</li>
+<li>Refined the display of card limits/upgrade/pricing if you're not upgraded yet</li>
+<li>Donate button moved to the About dialog. You can now donate even if you're not ugraded yet</li>
+<li>Added student discount and referral info in Upgrade and Pricing dialogs</li>
+<li>Invite Tips in Share dialog is less visually prominent</li>
+<li>In iOS (maybe android too), copy/invite url buttons now also have native sharesheet support</li>
+<li>Icons are preloaded when Kinopio starts up, so that they don't flash in later</li>
+<li>To make it easier to ♥ your own space, or explore/live spaces, a '♥' button is displayed inside the list item of the space</li>
+<li>Readonly cards now hide unusable buttons (instead of just greying them out) for a cleaner look</li>
+</ul>
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Importing <a class="autolink" href="https://are.na">are.na</a> channels correctly import image blocks</li>
+<li>Cards with images taller than the viewport correctly display when visible</li>
+<li>Connecting a card to an audio card creates a connection as expected</li>
+<li>User labels display with black text (instead of white) when the user color is dark</li>
+</ul>
+
+<h2>New Explore Spaces</h2>
+
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <p>
+    <!-- Okay that's enough of that, -->
+    (*・_・)ノ⌒*
+  </p>
+
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+  <p>
+    <img class="tiny-image" src="https://help.kinopio.club/assets/about/signature.png">
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="https://github.com/kinopio-club/kinopio-meta/tree/master/bulletins">Archives</a></p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>

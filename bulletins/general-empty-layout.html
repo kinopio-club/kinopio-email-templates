@@ -31,8 +31,16 @@
       font-weight: bold;
       font-style: normal;
     }
+
+    @font-face {
+      font-family: "gaya";
+      src: url("https://bk.kinopio.club/fonts/gaya/Gaya.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+    }
+
     h2 {
-      font-family: Recoleta, georgia, serif;
+      font-family: gaya, georgia, serif;
       font-weight: normal;
       font-size: 22px;
       margin-top: 2rem;
@@ -119,6 +127,9 @@
       min-width: 17px;
       vertical-align: middle;
     }
+    .badge span {
+      display: inline-block;
+    }
     .info {
       background-color: #90ffff;
     }
@@ -127,6 +138,17 @@
     }
     .danger {
       background-color: #ffb8b3;
+    }
+
+    .badge-row {
+      display: flex;
+      align-items: flex-start;
+    }
+    .badge-row .small-image {
+      max-width: 60px;
+      margin: 0;
+      margin-right: 6px;
+      padding: 4px 0;
     }
 
     .product {
@@ -214,6 +236,12 @@
       display: inline-block;
       margin-top: 0;
     }
+    .icon.group {
+      width: 12px;
+      display: inline-block;
+      margin-top: 0;
+      vertical-align: 0;
+    }
     .icon.heart {
       width: 14px;
       display: inline-block;
@@ -286,7 +314,10 @@ mail ul {
 
 .bulletin-image {
   margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
 }
+
 .small-image {
   max-width: 300px;
 }
@@ -294,11 +325,11 @@ mail ul {
   max-width: 80px;
 }
 
-    img.wide {
-      max-width: 700px;
-    }
-    img.narrow {
-      width: 250px;
+img.wide {
+  max-width: 700px;
+}
+img.narrow {
+  width: 250px;
 }
 
 a.text-link {
@@ -366,7 +397,8 @@ hr {
   filter: invert(1);
 }
 
-.user-badge {
+.user-badge,
+.group-badge {
   min-height: 20px;
 }
 
